@@ -11,6 +11,7 @@ class CustomSoapController extends Controller
         $server = new \SoapServer(null, [
             'uri' => url('/soap')
         ]);
+        
         $server->setClass('App\Http\Controllers\CustomSoapService');
         $server->handle();
     }
